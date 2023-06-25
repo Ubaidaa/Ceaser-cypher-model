@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cryptography Algorithm Implementation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+      .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.output {
+  margin-top: 20px;
+}
+
+.output h3 {
+  margin-bottom: 10px;
+}
+
+#encryption-output,
+#decryption-output {
+  font-weight: bold;
+}
+
+    </style>
+
+
+  <div class="container">
+    <h1 class="title">Cryptography Algorithm Implementation</h1>
+
+    <!-- Encryption Section -->
+    <div class="section">
+      <h2>Encryption</h2>
+      <form id="encryption-form">
+        <label for="encryption-text-input">Enter Text:</label>
+        <input type="text" id="encryption-text-input" name="encryption-text-input">
+
+        <label for="encryption-key-input">Encryption Key:</label>
+        <input type="text" id="encryption-key-input" name="encryption-key-input">
+
+        <label for="encryption-algorithm-select">Select Algorithm:</label>
+        <select id="encryption-algorithm-select" name="encryption-algorithm-select">
+          <option value="caesar">Caesar Cipher</option>
+          <option value="vigenere">Vigenère Cipher</option>
+          <!-- Add more options for other algorithms -->
+        </select>
+
+        <button type="submit">Encrypt</button>
+      </form>
+
+      <div class="output">
+        <h3>Encrypted Text:</h3>
+        <div id="encryption-output"></div>
+      </div>
+    </div>
+
+    <!-- Decryption Section -->
+    <div class="section">
+      <h2>Decryption</h2>
+      <form id="decryption-form">
+        <label for="decryption-text-input">Enter Text:</label>
+        <input type="text" id="decryption-text-input" name="decryption-text-input">
+
+        <label for="decryption-key-input">Decryption Key:</label>
+        <input type="text" id="decryption-key-input" name="decryption-key-input">
+
+        <label for="decryption-algorithm-select">Select Algorithm:</label>
+        <select id="decryption-algorithm-select" name="decryption-algorithm-select">
+          <option value="caesar">Caesar Cipher</option>
+          <option value="vigenere">Vigenère Cipher</option>
+          <!-- Add more options for other algorithms -->
+        </select>
+
+        <button type="submit">Decrypt</button>
+      </form>
+
+      <div class="output">
+        <h3>Decrypted Text:</h3>
+        <div id="decryption-output"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
